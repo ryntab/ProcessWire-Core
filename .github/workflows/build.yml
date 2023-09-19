@@ -1,14 +1,11 @@
-name: 🔒 Update Credentials
-
+name: 🤘Deploy
 on: 
   push:
     branches:
       - main
-
 jobs:
-  update-config:
+  config:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -29,5 +26,17 @@ jobs:
         DB_HOST: ${{ secrets.DB_HOST }}
       run: node builders/processwire-db.js
 
-
     # Further steps if needed, like deploying to a server.
+  deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ftp.gitdemo.sfadev.com
+        username: git@gitdemo.sfadev.com
+        password: ${{ secrets.ftp_password }}
