@@ -1,7 +1,5 @@
 const fs = require('fs');
 
-console.log(process)
-
 // Read environment variables
 const env_DB_Name = process.env.DB_NAME;
 const env_DB_User = process.env.DB_USER;
@@ -23,34 +21,18 @@ console.log('Searching site/config.php for database credentials...');
 // Path to your wp-config.php file
 const configFile = 'site/config.php';
 
-// Read the content of site/config.php
-const content = fs.readFileSync(configFile, 'utf8');
+// Read the config of site/config.php
+let config = fs.readFileSync(configFile, 'utf8');
 
 //Search Config file for DB_NAME, DB_USER, DB_Pass, DB_HOST
-const db_name = content.match(/define\('dbName', '(.*)'\);/)[1];
-const db_user = content.match(/define\('dbHost', '(.*)'\);/)[1];
-const db_Pass = content.match(/define\('dbPass', '(.*)'\);/)[1];
-const db_host = content.match(/define\('dbHost', '(.*)'\);/)[1];
+const newConfig = config
+    .replace(/^\s*\$config->dbName\s*=\s*'.*?';\s*$/m, `$config->dbName ='${env_DB_Name}';`)
+    .replace(/^\s*\$config->dbUser\s*=\s*'.*?';\s*$/m, `$config->dbUser ='${env_DB_User}';`)
+    .replace(/^\s*\$config->dbPass\s*=\s*'.*?';\s*$/m, `$config->dbPass ='${env_DB_Name}';`)
+    .replace(/^\s*\$config->dbHost\s*=\s*'.*?';\s*$/m, `$config->dbHost ='${env_DB_Name}';`)
+
 
 console.log('Updating site/config.php with the enviroment database credentials:');
 
-// Log the old credentials
-if (!db_name || !db_user || !db_Pass || !db_host) {
-    console.log('Configuration file does not contain database credentials \n Please check your site/config.php file');
-    console.log(`DB_NAME: ${db_name} \n
-    DB_USER: ${db_user} \n
-    DB_PASS: ${db_Pass} \n
-    DB_HOST: ${db_host} \n
-    \n`);
-    process.exit(1);
-}
-
-// Replace the old credentials with the new ones
-const updatedContent = content
-    .replace(db_name, env_DB_Name)
-    .replace(db_user, env_DB_User)
-    .replace(db_Pass, env_DB_Pass)
-    .replace(db_host, env_DB_Host);
-
-// Write the updated content back to wp-config.php
-fs.writeFileSync(configFile, updatedContent);
+// Write the updated config back to wp-config.php
+fs.writeFileSync(configFile, newConfig);
