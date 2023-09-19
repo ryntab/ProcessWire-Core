@@ -55,7 +55,7 @@ $config->dbHost = 'localhost';
 $config->dbName = 'local';
 $config->dbUser = 'root';
 $config->dbPass = 'root';
-$config->dbPort = '10017';
+$config->dbPort = '3306';
 
 /**
  * Installer: User Authentication Salt 
