@@ -7,8 +7,8 @@ jobs:
   config:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
 
     - name: Setup Node.js
       uses: actions/setup-node@v2
@@ -30,10 +30,7 @@ jobs:
   deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-    
+    steps:    
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
