@@ -1,90 +1,20 @@
-# Welcome to ProcessWire 3.x 
 
-This document is in Markdown. An HTML formatted version of this document 
-can be read at: https://github.com/processwire/processwire/blob/master/README.md
+# ProcessWire Core 3.x 
+This documentation details the workflow for ProcessWire sites.
+
 
 
 ## Table of Contents
+2. [Local Development](#local-dev)
+3. [Installation](#installing-processwire)
+4. [Upgrading](#upgrading-processwire)
+5. [Troubleshooting](https://processwire.com/docs/start/install/troubleshooting/)
+6. [Support](#support-and-links)
 
-1. [About](#about-processwire)
-2. [Installation](#installing-processwire)
-3. [Upgrading](#upgrading-processwire)
-4. [Troubleshooting](https://processwire.com/docs/start/install/troubleshooting/)
-5. [Support](#support-and-links)
-
-
-## About ProcessWire
-
-ProcessWire is a friendly and powerful open source CMS with an API that is a 
-joy to use at any scale. It is both a content management system (CMS) and 
-framework (CMF) built to save you time and work the way you do. With all custom 
-fields, a secure foundation, proven scalability and performance, ProcessWire 
-connects all of your content seamlessly, making your job fast, easy and fun.
-
-ProcessWire gives you more control over your fields, templates and markup than 
-other platforms, while ProcessWire’s API makes working with your content easy and 
-enjoyable. Managing and developing a site in ProcessWire is shockingly simple 
-compared to what you may be used to.
-
-ProcessWire is widely trusted by web professionals for its exceptional consistency, 
-stability and security; revered by web developers for its API that saves time and 
-makes work fun; valued by web designers for its adaptability and flexibility with 
-modern website/application content management needs; and loved by clients for its 
-no-nonsense interface and ease-of-use in adding, updating and maintaining content. 
-New versions of ProcessWire are released just about every week on the
-development branch. 
-
-
-### Background
-
-ProcessWire is a timeless tool for web professionals that has always been 
-committed to the long term. It started in 2003, gained the name ProcessWire
-in 2006, and has been in active development as an open source project since 2010. 
-Now more than a decade later (2023), we’re just getting started, as ProcessWire 
-continues to grow and develop into the next 10 years and beyond. 
-
-While ProcessWire has been around for a long time, don’t feel bad if you haven’t 
-heard of it till today. We are fundamentally different from other projects in 
-that we don’t make a lot of noise, we’re not into promotion, we value quality 
-over quantity, sustainability over growth, and a friendly community over 
-popularity. ProcessWire is designed to be a silent partner, not easily 
-identified from the front-end of any website. We don’t aim to be big, we are 
-instead focused on being best-in-class. 
-
-Web developers find ProcessWire when the time is right, after they’ve tried 
-some other platforms. And once they start using ProcessWire, they tend to 
-stay. ProcessWire is addictive, easy to maintain for the long term, and doesn’t
-have the security and upgrade woes of other platforms. But don’t take our word 
-for it; unless your livelihood depends on some other platform, find out for 
-yourself. 
-
-
-### Community
-
-ProcessWire is more than just software, it is also a friendly community
-of web professionals dedicated to building great sites and applications, and 
-helping others do so too. 
-
-Please visit and join our 
-[friendly community](https://processwire.com/talk/)
-in the ProcessWire forums, subscribe to our
-[weekly newsletter](https://processwire.com/community/newsletter/subscribe/)
-for the latest ProcessWire news, check out our
-[website showcase](https://processwire.com/sites/)
-to see what others are building with ProcessWire, and read our 
-[blog](https://processwire.com/blog/) 
-to stay up-to-date with the latest ProcessWire versions.
-
-Weekly ProcessWire news is posted by Teppo Koivula on his site 
-[ProcessWire Weekly](https://weekly.pw). 
-Weekly core updates and related topics are posted by Ryan Cramer in the 
-ProcessWire support forum 
-[News and Announcements](https://processwire.com/talk/forum/7-news-amp-announcements/) 
-board. 
 
 ### Learn more 
 
-* [ProcessWire website](https://processwire.com)
+* [ProcessWire](https://processwire.com)
 * [About ProcessWire](https://processwire.com/about/)
 * [Support forums](https://processwire.com/talk/)
 * [Documentation](https://processwire.com/docs/)
@@ -97,11 +27,6 @@ board.
 
 ## Installing ProcessWire
 
-Simply extract the ProcessWire files to an http accessible location and
-load the URL in your web browser. This will start the installer. See our
-[Installation Guide](https://processwire.com/docs/start/install/new/) for more 
-details and instructions. If you run into any trouble, please see our 
-[Troubleshooting Guide](https://processwire.com/docs/start/install/troubleshooting/). 
 
 
 ## Upgrading ProcessWire
@@ -180,5 +105,3 @@ resolved any issues.
 * [Report issue](https://github.com/processwire/processwire-issues/issues)
 
 ------
-
-Copyright 2023 by Ryan Cramer / Ryan Cramer Design, LLC
