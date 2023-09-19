@@ -1,0 +1,1 @@
+2023-09-19 16:34:24	admin	http://processwire-template.local/processwire/login/	Successful login for 'admin'
