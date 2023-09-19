@@ -29,7 +29,7 @@ jobs:
     - name: Upload config.php as artifact
       uses: actions/upload-artifact@v2
       with:
-        name: config.php
+        name: config
         path: site/config.php
 
     # Further steps if needed, like deploying to a server.
@@ -43,7 +43,7 @@ jobs:
     - name: Download modifiedconfig.php from artifact
       uses: actions/download-artifact@v2
       with:
-        name: config.php
+        name: config
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
