@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: '14' # or another version you prefer
 
-    - name: Install dependencies
+    - name: 🤖 Install dependencies
       run: npm install
 
     - name: Replace DB credentials in wp-config.php
@@ -29,8 +29,11 @@ jobs:
     # Further steps if needed, like deploying to a server.
   deploy:
     name: 🎉 Deploy
+    needs: config
     runs-on: ubuntu-latest
-    steps:    
+    steps: 
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3   
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
