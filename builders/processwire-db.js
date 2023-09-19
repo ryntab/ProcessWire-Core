@@ -7,9 +7,9 @@ const dbPassword = process.env.DB_PASSWORD;
 const dbHost = process.env.DB_HOST;
 
 // Path to your wp-config.php file
-const configFile = '.site/config.php';
+const configFile = 'site/config.php';
 
-// Read the content of wp-config.php
+// Read the content of site/config.php
 const content = fs.readFileSync(configFile, 'utf8');
 
 // Replace the old credentials with new ones
