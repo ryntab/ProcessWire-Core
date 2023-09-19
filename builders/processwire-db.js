@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+console.log(env)
+
 // Read environment variables
 const env_DB_Name = process.env.DB_NAME;
 const env_DB_User = process.env.DB_USER;
