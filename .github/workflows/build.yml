@@ -26,6 +26,12 @@ jobs:
         DB_HOST: ${{ secrets.DB_HOST }}
       run: node builders/processwire-db.js
 
+    - name: Upload config.php as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: config.php
+        path: site/config.php
+
     # Further steps if needed, like deploying to a server.
   deploy:
     name: 🎉 Deploy
@@ -34,6 +40,10 @@ jobs:
     steps: 
     - name: 🚚 Get latest code
       uses: actions/checkout@v3   
+    - name: Download modifiedconfig.php from artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: config.php
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
