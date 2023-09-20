@@ -30,7 +30,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: config
-        path: config.php
+        path: temp/config.php
 
     # Further steps if needed, like deploying to a server.
   deploy:
