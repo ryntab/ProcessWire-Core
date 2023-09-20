@@ -1,13 +1,12 @@
-
-
 # ProcessWire Core 3.x 
 This documentation details the workflow for ProcessWire sites.
 
 ## Table of Contents
 1. [Installation](#installation)
-2. [Upgrading](#upgrading-processwire)
-3. [Troubleshooting](https://processwire.com/docs/start/install/troubleshooting/)
-4. [Support](#support-and-links)
+2. [Local Development](#local)
+3. [Upgrading](#upgrading-processwire)
+4. [Troubleshooting](https://processwire.com/docs/start/install/troubleshooting/)
+5. [Support](#support-and-links)
 
 ### Learn more 
 * [ProcessWire](https://processwire.com)
@@ -34,7 +33,16 @@ npx pw-installer
 ```
 ![enter image description here](docs/installation.gif)
 
+## Local Development
 
+### Using Local WP
+ 1. Install Local WP
+ 2. Create a new site from a blueprint or blank template
+ 3. Open site folder, and delete the Wordpress installation
+ 4. Run the installation CLI command in the `app/public` directory `npx pw-installer`
+ 5. Open the site and complete the ProcessWire install.
+
+### Using Lando 🚧
 ## Upgrading ProcessWire
 
 Upgrading is easy and usually just a matter of replacing your `/wire/` directory
