@@ -28,8 +28,8 @@ let config = fs.readFileSync(configFile, 'utf8');
 const newConfig = config
     .replace(/^\s*\$config->dbName\s*=\s*'.*?';\s*$/m, `$config->dbName ='${env_DB_Name}';`)
     .replace(/^\s*\$config->dbUser\s*=\s*'.*?';\s*$/m, `$config->dbUser ='${env_DB_User}';`)
-    .replace(/^\s*\$config->dbPass\s*=\s*'.*?';\s*$/m, `$config->dbPass ='${env_DB_Name}';`)
-    .replace(/^\s*\$config->dbHost\s*=\s*'.*?';\s*$/m, `$config->dbHost ='${env_DB_Name}';`)
+    .replace(/^\s*\$config->dbPass\s*=\s*'.*?';\s*$/m, `$config->dbPass ='${env_DB_Pass}';`)
+    .replace(/^\s*\$config->dbHost\s*=\s*'.*?';\s*$/m, `$config->dbHost ='${env_DB_Host}';`)
 
 
 console.log('Updating site/config.php with the enviroment database credentials:');
