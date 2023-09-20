@@ -30,8 +30,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: /temp
-        retention-days: 1
+        path: artifact.php
 
     # Further steps if needed, like deploying to a server.
   deploy:
@@ -41,7 +40,7 @@ jobs:
     steps: 
     - name: 🚚 Get latest code
       uses: actions/checkout@v3   
-    - name: Downlod Artifacts 
+    - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
       with:
         name: my-artifact
