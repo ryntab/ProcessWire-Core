@@ -29,8 +29,9 @@ jobs:
     - name: Upload config.php as artifact
       uses: actions/upload-artifact@v3
       with:
-        name: my-artifact
-        path: ./site/config.php
+        name: config-artifact
+        path: ./site/config-temp.php
+        retention: 1
 
   # Further steps if needed, like deploying to a server.
   deploy:
@@ -43,7 +44,7 @@ jobs:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
       with:
-        name: my-artifact
+        name: config-artifact
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
