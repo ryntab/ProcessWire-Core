@@ -6,6 +6,7 @@ const env_DB_User = process.env.DB_USER;
 const env_DB_Pass = process.env.DB_PASS;
 const env_DB_Host = process.env.DB_HOST;
 
+// Exit if database config env is missing
 if (!env_DB_Name || !env_DB_User || !env_DB_Pass || !env_DB_Host) {
     console.log(`Please provide all the required environment variables to connect to the database. \n
     DB_NAME: ${env_DB_Name} \n
