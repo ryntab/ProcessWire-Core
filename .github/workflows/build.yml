@@ -44,6 +44,11 @@ jobs:
       
     - name: Download Artifacts 
       uses: actions/download-artifact@v3
+
+    - name: List directory and print modified config.php
+      run: |
+        ls site/
+        cat site/config.php
       
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
