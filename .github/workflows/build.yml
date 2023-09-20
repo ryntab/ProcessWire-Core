@@ -10,15 +10,15 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
 
-    - name: Setup Node.js
+    - name: ✅ Setup Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14' # or another version you prefer
 
-    - name: 🤖 Install dependencies
+    - name: ✅ Install dependencies
       run: npm install
 
-    - name: Replace DB credentials in wp-config.php
+    - name: ✏️ Replace DB credentials in wp-config.php
       env:
         DB_NAME: ${{ secrets.DB_NAME }}
         DB_USER: ${{ secrets.DB_USER }}
@@ -26,7 +26,7 @@ jobs:
         DB_HOST: ${{ secrets.DB_HOST }}
       run: node builders/processwire-db.js
 
-    - name: Upload config.php as artifact
+    - name: ⬆️ Upload config.php as artifact
       uses: actions/upload-artifact@v3
       with:
         name: config-artifact
@@ -42,16 +42,11 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3  
       
-    - name: Download Artifacts 
+    - name: ⬇️ Download Artifacts 
       uses: actions/download-artifact@v3
       with:
         name: config-artifact
         path: site/ # This specifies where to place the downloaded artifact
-
-    - name: List directory and print modified config.php
-      run: |
-        ls site/
-        cat site/config.php
       
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
