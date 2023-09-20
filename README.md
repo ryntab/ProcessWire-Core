@@ -1,19 +1,15 @@
 
+
 # ProcessWire Core 3.x 
 This documentation details the workflow for ProcessWire sites.
 
-
-
 ## Table of Contents
-2. [Local Development](#local-dev)
-3. [Installation](#installing-processwire)
-4. [Upgrading](#upgrading-processwire)
-5. [Troubleshooting](https://processwire.com/docs/start/install/troubleshooting/)
-6. [Support](#support-and-links)
-
+1. [Installation](#installation)
+2. [Upgrading](#upgrading-processwire)
+3. [Troubleshooting](https://processwire.com/docs/start/install/troubleshooting/)
+4. [Support](#support-and-links)
 
 ### Learn more 
-
 * [ProcessWire](https://processwire.com)
 * [About ProcessWire](https://processwire.com/about/)
 * [Support forums](https://processwire.com/talk/)
@@ -24,9 +20,19 @@ This documentation details the workflow for ProcessWire sites.
 * [Showcase](https://processwire.com/sites/)
 
 -----------------------------------------------------------------
+## Installation
 
-## Installing ProcessWire
+Install the LTS Version of node.js and npm
 
+``` shell
+sudo apt install nodejs npm
+```
+
+Navigate to installation directory folder and execute the installer within the folder.
+``` shell
+npx pw-installer
+```
+![enter image description here](docs/installation.gif)
 
 
 ## Upgrading ProcessWire
