@@ -44,7 +44,7 @@ jobs:
     - name: Downlod Artifacts 
       uses: actions/download-artifact@v3
       with:
-        name: config
+        name: my-artifact
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
