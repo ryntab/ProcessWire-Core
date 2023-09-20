@@ -11,5 +11,5 @@
 ?>
 
 <div id="content">
-	Test Branch Deploy
+	Homepage content 
 </div>	
