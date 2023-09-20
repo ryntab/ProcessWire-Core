@@ -24,7 +24,7 @@ const configFile = 'site/config.php';
 // Read the config of site/config.php
 let config = fs.readFileSync(configFile, 'utf8');
 
-//Search Config file for DB_NAME, DB_USER, DB_Pass, DB_HOST
+//Search Config file for DB_NAME, DB_USER, DB_Pass, DB_HOST and write to artifact
 const newConfig = config
     .replace(/^\s*\$config->dbName\s*=\s*'.*?';\s*$/m, `$config->dbName ='${env_DB_Name}';`)
     .replace(/^\s*\$config->dbUser\s*=\s*'.*?';\s*$/m, `$config->dbUser ='${env_DB_User}';`)
