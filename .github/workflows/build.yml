@@ -41,10 +41,8 @@ jobs:
     steps: 
     - name: 🚚 Get latest code
       uses: actions/checkout@v3   
-    - name: Download all workflow run artifacts
+    - name: Downlod Artifacts 
       uses: actions/download-artifact@v3
-      with:
-        name: config-artifact
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
