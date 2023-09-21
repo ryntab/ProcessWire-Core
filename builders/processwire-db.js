@@ -1,5 +1,11 @@
 const fs = require('fs');
 
+// Check if ProcessWire is installed
+if (!fs.existsSync('install.php')) {
+    console.log('ProcessWire is not installed. Please install ProcessWire first.');
+    process.exit(1);
+}
+
 // Read environment variables
 const env_DB_Name = process.env.DB_NAME;
 const env_DB_User = process.env.DB_USER;
@@ -24,6 +30,8 @@ const configFile = 'site/config.php';
 
 // Read the config of site/config.php
 let config = fs.readFileSync(configFile, 'utf8');
+
+//
 
 //Search Config file for DB_NAME, DB_USER, DB_Pass, DB_HOST and write to artifact
 const newConfig = config
