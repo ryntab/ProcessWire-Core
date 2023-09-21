@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Processwire Dev Runner.",
   "scripts": {
-    "hot": "browser-sync start --proxy \"test2.local\" --files \"**/*.php, **/*.css, **/*.js\""
+    "hot": "browser-sync start --proxy \"test2.local\" --files \"**/*.php, **/*.css, **/*.js\"",
+    "build": "node builders/processwire-db.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.29.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1"
   }
 }
