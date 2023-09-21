@@ -1,9 +1,10 @@
 const fs = require('fs');
+const core = require('@actions/core');
 
-// Check if ProcessWire is installed
-if (!fs.existsSync('./install.php')) {
-    console.log('ProcessWire is not installed. Please install ProcessWire first.');
-    process.exit(1);
+// Check if install.php exists
+if (fs.existsSync('install.php')) {
+    core.error('Install.php exists. ProcessWire has not been installed yet.', {file: 'app.js', startLine: 1})
+    process.exit(0);
 }
 
 // Read environment variables
