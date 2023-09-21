@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // Check if ProcessWire is installed
-if (!fs.existsSync('install.php')) {
+if (!fs.existsSync('./install.php')) {
     console.log('ProcessWire is not installed. Please install ProcessWire first.');
     process.exit(1);
 }
