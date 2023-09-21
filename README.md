@@ -56,7 +56,8 @@ npm run hot
 This will start the proxy server and open the browser. You can now make changes to your files and the browser will automatically reload when a change is detected. This will not reload the domain set in Local WP, so you will need to manually refresh the browser.
 
 ### Using Lando & Docker 🚧
-Coming soon...
+First install Lando & Docker [API reference](https://docs.lando.dev/getting-started/installation.html) so that you can create the LAMP stack container.
+From the root of the project `public/` run the command `lando start` to initialize the docker container & image or to start an existing docker instance.
 
 ## Upgrading ProcessWire
 
