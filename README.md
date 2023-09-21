@@ -42,7 +42,22 @@ npx pw-installer
  4. Run the installation CLI command in the `app/public` directory `npx pw-installer`
  5. Open the site and complete the ProcessWire install.
 
-### Using Lando 🚧
+### Hot Reload 🔥
+You can use hot reload to automatically reload the browser when you make changes to your files. This is done by using a proxy server that watches for changes in your files and reloads the browser when a change is detected. This is useful for development, but not recommended for production. 
+
+To enable hot reload, install the templates dependencies with node package manager (npm). 
+```
+npm install
+```
+Then run the hot reload command
+```
+npm run hot
+```
+This will start the proxy server and open the browser. You can now make changes to your files and the browser will automatically reload when a change is detected. This will not reload the domain set in Local WP, so you will need to manually refresh the browser.
+
+### Using Lando & Docker 🚧
+Coming soon...
+
 ## Upgrading ProcessWire
 
 Upgrading is easy and usually just a matter of replacing your `/wire/` directory

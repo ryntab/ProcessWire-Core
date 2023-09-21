@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Processwire Dev Runner.",
   "scripts": {
-    "start": "browser-sync start --proxy \"test2.local\" --files \"**/*.php, **/*.css, **/*.js\""
+    "hot": "browser-sync start --proxy \"test2.local\" --files \"**/*.php, **/*.css, **/*.js\""
   },
   "author": "",
   "license": "ISC",
