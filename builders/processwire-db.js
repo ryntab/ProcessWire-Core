@@ -1,9 +1,8 @@
 const fs = require('fs');
-const core = require('@actions/core');
 
 // Check if install.php exists
 if (fs.existsSync('install.php')) {
-    core.error('Install.php exists. ProcessWire has not been installed yet.', {file: 'app.js', startLine: 1})
+    console.log('::error::install.php exists. Please remove it before running this action.');
     process.exit(0);
 }
 
